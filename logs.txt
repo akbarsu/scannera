@@ -17,11 +17,45 @@ Output successfully saved to network route-table.json
 Executing: az network application-gateway waf-policy list --query "[].{Name:name, PolicySettings:policySettings, Rules:customRules}" --output json
 Output successfully saved to network application-gateway waf-policy.json
 Executing: az network firewall policy list --query "[].{Name:name, Rules:ruleCollectionGroups, Settings:threatIntelMode}" --output json
-WARNING: The command requires the extension azure-firewall. It will be installed first.
-WARNING: The installed extension 'azure-firewall' is in preview.
 Output successfully saved to network firewall policy.json
-Executing: az network vnet-gateway list --query "[].{Name:name, VPNType:vpnType, GatewayType:gatewayType, IPConfigurations:ipConfigurations}" --output json
-ERROR: the following arguments are required: --resource-group/-g
+Executing: az network vnet-gateway list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, VPNType:vpnType, GatewayType:gatewayType, IPConfigurations:ipConfigurations}" --output json
+ERROR: unrecognized arguments: NetworkWatcherRG resource-graph-queries logs Contoso-POC-Automation-RG-01 Contoso-POC-Automation-rg-01-SP2019Farm ASC-Export-Log-Analytics-Configuration Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG aibmdi001 WIN2K16-TEMP_group DefaulResourceGroup-EUS2 TestRHELBuild_group microsoft-network-eastus2 cloud-shell-storage-eastus DemoResourceGroup myrg-sk Dev_Azure_CloudSandbox1_rg databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my DefaultResourceGroup-WEU MaximusK8sDemo vmsssecondtest-asr-1 Site-recovery-vaut-RG-1 EAP_PoC_DevWEU_RG EAP_PoC_STGWEU_RG EAP_PoC_ProdWEU_RG EAP_PoC_TSTWEU_RG SQl-Backup-PoC-CA-416 sqlbackuppocrg testing-automation-account test2_RG test1_RG DefaultResourceGroup-EUS Site-recovery-vault-RG testingasr-asr SQL-Backup-to-Blob vmsstest testingasr
 
 Examples from AI knowledge base:
 az network vnet-gateway list --resource-group MyResourceGroup
@@ -29,30 +63,99 @@ List virtual network gateways in a resource group.
 
 https://docs.microsoft.com/en-US/cli/azure/network/vnet-gateway#az_network_vnet_gateway_list
 Read more about the command in reference docs
-Error executing az network vnet-gateway list --query "[].{Name:name, VPNType:vpnType, GatewayType:gatewayType, IPConfigurations:ipConfigurations}" --output json, see network vnet-gateway.json for details.
-Executing: az network network-intent-policy list --query "[].{Name:name, PolicySettings:policySettings, Rules:rules}" --output json
-ERROR: 'network-intent-policy' is misspelled or not recognized by the system.
+Error executing az network vnet-gateway list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, VPNType:vpnType, GatewayType:gatewayType, IPConfigurations:ipConfigurations}" --output json, see network vnet-gateway.json for details.
+Executing: az network intent-policy list --query "[].{Name:name, PolicySettings:policySettings, Rules:rules}" --output json
+ERROR: 'intent-policy' is misspelled or not recognized by the system.
 
 Examples from AI knowledge base:
 https://aka.ms/cli_ref
 Read more about the command in reference docs
-Error executing az network network-intent-policy list --query "[].{Name:name, PolicySettings:policySettings, Rules:rules}" --output json, see network network-intent-policy.json for details.
+Error executing az network intent-policy list --query "[].{Name:name, PolicySettings:policySettings, Rules:rules}" --output json, see network intent-policy.json for details.
 Executing: az network firewall list --query "[].{Name:name, IPConfigurations:ipConfigurations, Rules:rules}" --output json
 Output successfully saved to network firewall.json
 Executing: az network vhub list --query "[].{Name:name, AddressPrefixes:addressPrefixes, RouteTables:routeTables}" --output json
-WARNING: The command requires the extension virtual-wan. It will be installed first.
-WARNING: The installed extension 'virtual-wan' is in preview.
 Output successfully saved to network vhub.json
 Executing: az network asg list --query "[].{Name:name, SecurityRules:securityRules}" --output json
 Output successfully saved to network asg.json
 Executing: az network bastion list --query "[].{Name:name, IPConfigurations:ipConfigurations}" --output json
-WARNING: The command requires the extension bastion. It will be installed first.
 WARNING: This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus
 Output successfully saved to network bastion.json
 Executing: az network ddos-protection list --query "[].{Name:name, ProtectionPlanSettings:protectionPlanSettings}" --output json
 Output successfully saved to network ddos-protection.json
-Executing: az network vpn-connection list --query "[].{Name:name, ConnectionStatus:connectionStatus, SharedKey:sharedKey}" --output json
-ERROR: the following arguments are required: --resource-group/-g
+Executing: az network vpn-connection list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, ConnectionStatus:connectionStatus, SharedKey:sharedKey}" --output json
+ERROR: unrecognized arguments: NetworkWatcherRG resource-graph-queries logs Contoso-POC-Automation-RG-01 Contoso-POC-Automation-rg-01-SP2019Farm ASC-Export-Log-Analytics-Configuration Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG aibmdi001 WIN2K16-TEMP_group DefaulResourceGroup-EUS2 TestRHELBuild_group microsoft-network-eastus2 cloud-shell-storage-eastus DemoResourceGroup myrg-sk Dev_Azure_CloudSandbox1_rg databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my DefaultResourceGroup-WEU MaximusK8sDemo vmsssecondtest-asr-1 Site-recovery-vaut-RG-1 EAP_PoC_DevWEU_RG EAP_PoC_STGWEU_RG EAP_PoC_ProdWEU_RG EAP_PoC_TSTWEU_RG SQl-Backup-PoC-CA-416 sqlbackuppocrg testing-automation-account test2_RG test1_RG DefaultResourceGroup-EUS Site-recovery-vault-RG testingasr-asr SQL-Backup-to-Blob vmsstest testingasr
 
 Examples from AI knowledge base:
 az network vpn-connection list --resource-group MyResourceGroup
@@ -60,73 +163,96 @@ List all VPN connections in a resource group.
 
 https://docs.microsoft.com/en-US/cli/azure/network/vpn-connection#az_network_vpn_connection_list
 Read more about the command in reference docs
-Error executing az network vpn-connection list --query "[].{Name:name, ConnectionStatus:connectionStatus, SharedKey:sharedKey}" --output json, see network vpn-connection.json for details.
-Executing: az network private-link-service connection list --query "[].{Name:name, ConnectionStatus:connectionStatus, PrivateLinkServiceID:privateLinkServiceId}" --output json
-ERROR: 'list' is misspelled or not recognized by the system.
-
-Examples from AI knowledge base:
-https://aka.ms/cli_ref
-Read more about the command in reference docs
-Error executing az network private-link-service connection list --query "[].{Name:name, ConnectionStatus:connectionStatus, PrivateLinkServiceID:privateLinkServiceId}" --output json, see network private-link-service connection.json for details.
-Executing: az network dns resolver outbound-endpoint list --query "[].{Name:name, IPConfigurations:ipConfigurations}" --output json
-ERROR: 'resolver' is misspelled or not recognized by the system.
-
-Examples from AI knowledge base:
-https://aka.ms/cli_ref
-Read more about the command in reference docs
-Error executing az network dns resolver outbound-endpoint list --query "[].{Name:name, IPConfigurations:ipConfigurations}" --output json, see network dns resolver outbound-endpoint.json for details.
-Executing: az network dns forwarding-rule-set list --query "[].{Name:name, Rules:forwardingRules}" --output json
-ERROR: 'forwarding-rule-set' is misspelled or not recognized by the system.
-
-Examples from AI knowledge base:
-https://aka.ms/cli_ref
-Read more about the command in reference docs
-Error executing az network dns forwarding-rule-set list --query "[].{Name:name, Rules:forwardingRules}" --output json, see network dns forwarding-rule-set.json for details.
+Error executing az network vpn-connection list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, ConnectionStatus:connectionStatus, SharedKey:sharedKey}" --output json, see network vpn-connection.json for details.
+Executing: az network private-link-service show --query "[].{Name:name, ConnectionStatus:connectionStatus, PrivateLinkServiceID:privateLinkServiceId}" --output json
+ERROR: InvalidArgumentValue: Missing required field: --resource-group
+Error executing az network private-link-service show --query "[].{Name:name, ConnectionStatus:connectionStatus, PrivateLinkServiceID:privateLinkServiceId}" --output json, see .json for details.
 Executing: az network vwan list --query "[].{Name:name, Properties:properties, Hubs:hubs}" --output json
 Output successfully saved to network vwan.json
 Executing: az network service-endpoint policy list --query "[].{Name:name, Definitions:serviceEndpointPolicyDefinitions}" --output json
 Output successfully saved to network service-endpoint policy.json
-Executing: az network private-link service list --query "[].{Name:name, Properties:properties, IPConfigurations:ipConfigurations}" --output json
-ERROR: 'private-link' is misspelled or not recognized by the system.
-Did you mean 'private-link-service' ?
-
-Examples from AI knowledge base:
-https://aka.ms/cli_ref
-Read more about the command in reference docs
-Error executing az network private-link service list --query "[].{Name:name, Properties:properties, IPConfigurations:ipConfigurations}" --output json, see network private-link service.json for details.
 Executing: az network express-route gateway list --query "[].{Name:name, Properties:properties, Connections:connections}" --output json
 Output successfully saved to network express-route gateway.json
-Executing: az network dns resolver list --query "[].{Name:name, Properties:properties, IPConfigurations:ipConfigurations}" --output json
-ERROR: 'resolver' is misspelled or not recognized by the system.
-
-Examples from AI knowledge base:
-https://aka.ms/cli_ref
-Read more about the command in reference docs
-Error executing az network dns resolver list --query "[].{Name:name, Properties:properties, IPConfigurations:ipConfigurations}" --output json, see network dns resolver.json for details.
-Executing: az network express-route circuit list --query "[].{Name:name, Properties:properties, Peerings:peerings}" --output json
-ERROR: 'circuit' is misspelled or not recognized by the system.
-
-Examples from AI knowledge base:
-https://aka.ms/cli_ref
-Read more about the command in reference docs
-Error executing az network express-route circuit list --query "[].{Name:name, Properties:properties, Peerings:peerings}" --output json, see network express-route circuit.json for details.
 Executing: az network vpn-site list --query "[].{Name:name, Properties:properties, IPConfigurations:ipConfigurations}" --output json
 Output successfully saved to network vpn-site.json
-Executing: az network dns resolver inbound-endpoint list --query "[].{Name:name, Properties:properties, IPConfigurations:ipConfigurations}" --output json
-ERROR: 'resolver' is misspelled or not recognized by the system.
-
-Examples from AI knowledge base:
-https://aka.ms/cli_ref
-Read more about the command in reference docs
-Error executing az network dns resolver inbound-endpoint list --query "[].{Name:name, Properties:properties, IPConfigurations:ipConfigurations}" --output json, see network dns resolver inbound-endpoint.json for details.
 Executing: az network public-ip prefix list --query "[].{Name:name, Properties:properties, IPRanges:ipPrefixes}" --output json
 Output successfully saved to network public-ip prefix.json
 Executing: az network ip-group list --query "[].{Name:name, Properties:properties, IPAddresses:ipAddresses}" --output json
-WARNING: The command requires the extension ip-group. It will be installed first.
-WARNING: The installed extension 'ip-group' is in preview.
 Output successfully saved to network ip-group.json
-Executing: az network local-gateway list --query "[].{Name:name, Properties:properties, IPConfigurations:ipConfigurations}" --output json
-ERROR: the following arguments are required: --resource-group/-g
+Executing: az network local-gateway list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, Properties:properties, IPConfigurations:ipConfigurations}" --output json
+ERROR: unrecognized arguments: NetworkWatcherRG resource-graph-queries logs Contoso-POC-Automation-RG-01 Contoso-POC-Automation-rg-01-SP2019Farm ASC-Export-Log-Analytics-Configuration Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG aibmdi001 WIN2K16-TEMP_group DefaulResourceGroup-EUS2 TestRHELBuild_group microsoft-network-eastus2 cloud-shell-storage-eastus DemoResourceGroup myrg-sk Dev_Azure_CloudSandbox1_rg databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my DefaultResourceGroup-WEU MaximusK8sDemo vmsssecondtest-asr-1 Site-recovery-vaut-RG-1 EAP_PoC_DevWEU_RG EAP_PoC_STGWEU_RG EAP_PoC_ProdWEU_RG EAP_PoC_TSTWEU_RG SQl-Backup-PoC-CA-416 sqlbackuppocrg testing-automation-account test2_RG test1_RG DefaultResourceGroup-EUS Site-recovery-vault-RG testingasr-asr SQL-Backup-to-Blob vmsstest testingasr
 
 Examples from AI knowledge base:
 az network local-gateway list --resource-group MyResourceGroup
@@ -134,42 +260,443 @@ List all local VPN gateways in a resource group.
 
 https://docs.microsoft.com/en-US/cli/azure/network/local-gateway#az_network_local_gateway_list
 Read more about the command in reference docs
-Error executing az network local-gateway list --query "[].{Name:name, Properties:properties, IPConfigurations:ipConfigurations}" --output json, see network local-gateway.json for details.
-Executing: az network manager list --query "[].{Name:name, Properties:properties, NetworkGroups:networkGroups}" --output json
-WARNING: The command requires the extension virtual-network-manager. It will be installed first.
-ERROR: the following arguments are required: --resource-group/-g
+Error executing az network local-gateway list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, Properties:properties, IPConfigurations:ipConfigurations}" --output json, see network local-gateway.json for details.
+Executing: az network manager list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, Properties:properties, NetworkGroups:networkGroups}" --output json
+ERROR: unrecognized arguments: NetworkWatcherRG resource-graph-queries logs Contoso-POC-Automation-RG-01 Contoso-POC-Automation-rg-01-SP2019Farm ASC-Export-Log-Analytics-Configuration Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG aibmdi001 WIN2K16-TEMP_group DefaulResourceGroup-EUS2 TestRHELBuild_group microsoft-network-eastus2 cloud-shell-storage-eastus DemoResourceGroup myrg-sk Dev_Azure_CloudSandbox1_rg databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my DefaultResourceGroup-WEU MaximusK8sDemo vmsssecondtest-asr-1 Site-recovery-vaut-RG-1 EAP_PoC_DevWEU_RG EAP_PoC_STGWEU_RG EAP_PoC_ProdWEU_RG EAP_PoC_TSTWEU_RG SQl-Backup-PoC-CA-416 sqlbackuppocrg testing-automation-account test2_RG test1_RG DefaultResourceGroup-EUS Site-recovery-vault-RG testingasr-asr SQL-Backup-to-Blob vmsstest testingasr
 
 Examples from AI knowledge base:
-az network manager list --resource-group "rg1"
-List Azure Virtual Network Manager
-
 https://aka.ms/cli_ref
 Read more about the command in reference docs
-Error executing az network manager list --query "[].{Name:name, Properties:properties, NetworkGroups:networkGroups}" --output json, see network manager.json for details.
-Executing: az vm extension list --query "[].{Name:name, Properties:properties, Settings:settings}" --output json
-ERROR: (--resource-group --vm-name | --ids) are required
-Error executing az vm extension list --query "[].{Name:name, Properties:properties, Settings:settings}" --output json, see vm extension.json for details.
-Executing: az network watcher connection-monitor list --query "[].{Name:name, Properties:properties, Endpoints:endpoints}" --output json
-ERROR: the following arguments are required: -l/--location
+Error executing az network manager list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, Properties:properties, NetworkGroups:networkGroups}" --output json, see network manager.json for details.
+Executing: az vm extension list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --vm-name tsttsti4d003.abc.amerisourcebergen.com
+tsttsti4d004.abc.amerisourcebergen.com
+tsttsti4t002.abc.amerisourcebergen.com
+window-hybrid
+windows-hybrid
+jumpbox123
+testingasr
+TestRHELBuild
+eaptestvm --query "[].{Name:name, Properties:properties, Settings:settings}" --output json
+ERROR: unrecognized arguments: NetworkWatcherRG resource-graph-queries logs Contoso-POC-Automation-RG-01 Contoso-POC-Automation-rg-01-SP2019Farm ASC-Export-Log-Analytics-Configuration Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG aibmdi001 WIN2K16-TEMP_group DefaulResourceGroup-EUS2 TestRHELBuild_group microsoft-network-eastus2 cloud-shell-storage-eastus DemoResourceGroup myrg-sk Dev_Azure_CloudSandbox1_rg databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my DefaultResourceGroup-WEU MaximusK8sDemo vmsssecondtest-asr-1 Site-recovery-vaut-RG-1 EAP_PoC_DevWEU_RG EAP_PoC_STGWEU_RG EAP_PoC_ProdWEU_RG EAP_PoC_TSTWEU_RG SQl-Backup-PoC-CA-416 sqlbackuppocrg testing-automation-account test2_RG test1_RG DefaultResourceGroup-EUS Site-recovery-vault-RG testingasr-asr SQL-Backup-to-Blob vmsstest testingasr tsttst4d004.abc.amerisourcebergen.com tsttsti4t002.abc.amerisourcebergen.com window-hybrid windows-hybrid jumpbox123 testingasr TestRHELBuild eaptestvm
 
 Examples from AI knowledge base:
-az network watcher connection-monitor list --location westus
-List a connection monitor for the given region.
+az vm extension list --resource-group MyResourceGroup --vm-name MyVm
+List attached extensions to a named VM.
 
-https://docs.microsoft.com/en-US/cli/azure/network/watcher/connection-monitor#az_network_watcher_connection_monitor_list
+https://docs.microsoft.com/en-US/cli/azure/vm/extension#az_vm_extension_list
 Read more about the command in reference docs
-Error executing az network watcher connection-monitor list --query "[].{Name:name, Properties:properties, Endpoints:endpoints}" --output json, see network watcher connection-monitor.json for details.
-Executing: az monitor scheduled-query-rules list --query "[].{Name:name, Properties:properties, Conditions:conditions, Actions:actions}" --output json
-ERROR: 'scheduled-query-rules' is misspelled or not recognized by the system.
+Error executing az vm extension list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --vm-name tsttsti4d003.abc.amerisourcebergen.com
+tsttsti4d004.abc.amerisourcebergen.com
+tsttsti4t002.abc.amerisourcebergen.com
+window-hybrid
+windows-hybrid
+jumpbox123
+testingasr
+TestRHELBuild
+eaptestvm --query "[].{Name:name, Properties:properties, Settings:settings}" --output json, see vm extension.json for details.
+Executing: az network watcher connection-monitor list --location eastus
+eastus2
+southcentralus
+westus2
+westus3
+australiaeast
+southeastasia
+northeurope
+swedencentral
+uksouth
+westeurope
+centralus
+southafricanorth
+centralindia
+eastasia
+japaneast
+koreacentral
+canadacentral
+francecentral
+germanywestcentral
+italynorth
+norwayeast
+polandcentral
+switzerlandnorth
+mexicocentral
+uaenorth
+brazilsouth
+israelcentral
+qatarcentral
+centralusstage
+eastusstage
+eastus2stage
+northcentralusstage
+southcentralusstage
+westusstage
+westus2stage
+asia
+asiapacific
+australia
+brazil
+canada
+europe
+france
+germany
+global
+india
+israel
+italy
+japan
+korea
+newzealand
+norway
+poland
+qatar
+singapore
+southafrica
+sweden
+switzerland
+uae
+uk
+unitedstates
+unitedstateseuap
+eastasiastage
+southeastasiastage
+brazilus
+eastusstg
+northcentralus
+westus
+japanwest
+jioindiawest
+centraluseuap
+eastus2euap
+westcentralus
+southafricawest
+australiacentral
+australiacentral2
+australiasoutheast
+jioindiacentral
+koreasouth
+southindia
+westindia
+canadaeast
+francesouth
+germanynorth
+norwaywest
+switzerlandwest
+ukwest
+uaecentral
+brazilsoutheast --query "[].{Name:name, Properties:properties, Endpoints:endpoints}" --output json
+ERROR: unrecognized arguments: eastus2 southcentralus westus2 westus3 australiaeast southeastasia northeurope swedencentral uksouth westeurope centralus southafricanorth centralindia eastasia japaneast koreacentral canadacentral francecentral germanywestcentral italynorh norwayeast polandcentral switzerlandnorth mexicocentral uaenorth brazilsouth israelcentral qatarcentral centralusstage eastusstage eastus2stage northcentralusstage southcentralusstage westusstage westus2stage asia asiapacific australia brazil canada europe france germny global india israel italy japan korea newzealand norway poland qatar singapore southafrica sweden switzerland uae uk unitedstates unitedstateseuap eastasiastage southeastasiastage brazilus eastusstg northcentralus westus japanwest jioindiawest centraluseuap eastus2eup westcentralus southafricawest australiacentral australiacentral2 australiasoutheast jioindiacentral koreasouth southindia westindia canadaeast francesouth germanynorth norwaywest switzerlandwest ukwest uaecentral brazilsoutheast
 
 Examples from AI knowledge base:
 https://aka.ms/cli_ref
 Read more about the command in reference docs
-Error executing az monitor scheduled-query-rules list --query "[].{Name:name, Properties:properties, Conditions:conditions, Actions:actions}" --output json, see monitor scheduled-query-rules.json for details.
+Error executing az network watcher connection-monitor list --location eastus
+eastus2
+southcentralus
+westus2
+westus3
+australiaeast
+southeastasia
+northeurope
+swedencentral
+uksouth
+westeurope
+centralus
+southafricanorth
+centralindia
+eastasia
+japaneast
+koreacentral
+canadacentral
+francecentral
+germanywestcentral
+italynorth
+norwayeast
+polandcentral
+switzerlandnorth
+mexicocentral
+uaenorth
+brazilsouth
+israelcentral
+qatarcentral
+centralusstage
+eastusstage
+eastus2stage
+northcentralusstage
+southcentralusstage
+westusstage
+westus2stage
+asia
+asiapacific
+australia
+brazil
+canada
+europe
+france
+germany
+global
+india
+israel
+italy
+japan
+korea
+newzealand
+norway
+poland
+qatar
+singapore
+southafrica
+sweden
+switzerland
+uae
+uk
+unitedstates
+unitedstateseuap
+eastasiastage
+southeastasiastage
+brazilus
+eastusstg
+northcentralus
+westus
+japanwest
+jioindiawest
+centraluseuap
+eastus2euap
+westcentralus
+southafricawest
+australiacentral
+australiacentral2
+australiasoutheast
+jioindiacentral
+koreasouth
+southindia
+westindia
+canadaeast
+francesouth
+germanynorth
+norwaywest
+switzerlandwest
+ukwest
+uaecentral
+brazilsoutheast --query "[].{Name:name, Properties:properties, Endpoints:endpoints}" --output json, see network watcher connection-monitor.json for details.
 Executing: az vm list --query "[].{Name:name, Properties:properties, NetworkInterfaces:networkInterfaces}" --output json
 Output successfully saved to vm.json
-Executing: az cdn waf policy list --query "[].{Name:name, PolicySettings:policySettings, Rules:rules}" --output json
-ERROR: the following arguments are required: --resource-group/-g
+Executing: az cdn waf policy list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, PolicySettings:policySettings, Rules:rules}" --output json
+ERROR: unrecognized arguments: NetworkWatcherRG resource-graph-queries logs Contoso-POC-Automation-RG-01 Contoso-POC-Automation-rg-01-SP2019Farm ASC-Export-Log-Analytics-Configuration Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG aibmdi001 WIN2K16-TEMP_group DefaulResourceGroup-EUS2 TestRHELBuild_group microsoft-network-eastus2 cloud-shell-storage-eastus DemoResourceGroup myrg-sk Dev_Azure_CloudSandbox1_rg databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my DefaultResourceGroup-WEU MaximusK8sDemo vmsssecondtest-asr-1 Site-recovery-vaut-RG-1 EAP_PoC_DevWEU_RG EAP_PoC_STGWEU_RG EAP_PoC_ProdWEU_RG EAP_PoC_TSTWEU_RG SQl-Backup-PoC-CA-416 sqlbackuppocrg testing-automation-account test2_RG test1_RG DefaultResourceGroup-EUS Site-recovery-vault-RG testingasr-asr SQL-Backup-to-Blob vmsstest testingasr
 
 Examples from AI knowledge base:
 az cdn waf policy list --resource-group group
@@ -177,28 +704,164 @@ List CDN WAF policies in a resource group.
 
 https://docs.microsoft.com/en-US/cli/azure/cdn/waf/policy#az_cdn_waf_policy_list
 Read more about the command in reference docs
-Error executing az cdn waf policy list --query "[].{Name:name, PolicySettings:policySettings, Rules:rules}" --output json, see cdn waf policy.json for details.
-Executing: az ts version list --query "[].{Name:name, Properties:properties, Versions:versions}" --output json
-ERROR: 'version' is misspelled or not recognized by the system.
-
-Examples from AI knowledge base:
-https://aka.ms/cli_ref
-Read more about the command in reference docs
-Error executing az ts version list --query "[].{Name:name, Properties:properties, Versions:versions}" --output json, see ts version.json for details.
+Error executing az cdn waf policy list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, PolicySettings:policySettings, Rules:rules}" --output json, see cdn waf policy.json for details.
 Executing: az storage account list --query "[].{Name:name, Properties:properties, NetworkRules:networkRules}" --output json
 Output successfully saved to storage account.json
 Executing: az sql server list --query "[].{Name:name, Properties:properties, FirewallRules:firewallRules}" --output json
 Output successfully saved to sql server.json
-Executing: az network front-door waf-policy list --query "[].{Name:name, PolicySettings:policySettings, Rules:rules}" --output json
-WARNING: The command requires the extension front-door. It will be installed first.
-ERROR: the following arguments are required: --resource-group/-g
+Executing: az network front-door waf-policy list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, PolicySettings:policySettings, Rules:rules}" --output json
+ERROR: unrecognized arguments: NetworkWatcherRG resource-graph-queries logs Contoso-POC-Automation-RG-01 Contoso-POC-Automation-rg-01-SP2019Farm ASC-Export-Log-Analytics-Configuration Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG aibmdi001 WIN2K16-TEMP_group DefaulResourceGroup-EUS2 TestRHELBuild_group microsoft-network-eastus2 cloud-shell-storage-eastus DemoResourceGroup myrg-sk Dev_Azure_CloudSandbox1_rg databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my DefaultResourceGroup-WEU MaximusK8sDemo vmsssecondtest-asr-1 Site-recovery-vaut-RG-1 EAP_PoC_DevWEU_RG EAP_PoC_STGWEU_RG EAP_PoC_ProdWEU_RG EAP_PoC_TSTWEU_RG SQl-Backup-PoC-CA-416 sqlbackuppocrg testing-automation-account test2_RG test1_RG DefaultResourceGroup-EUS Site-recovery-vault-RG testingasr-asr SQL-Backup-to-Blob vmsstest testingasr
 
 Examples from AI knowledge base:
 https://aka.ms/cli_ref
 Read more about the command in reference docs
-Error executing az network front-door waf-policy list --query "[].{Name:name, PolicySettings:policySettings, Rules:rules}" --output json, see network front-door waf-policy.json for details.
-Executing: az search service list --query "[].{Name:name, Properties:properties, QueryKeys:queryKeys}" --output json
-ERROR: the following arguments are required: --resource-group/-g
+Error executing az network front-door waf-policy list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, PolicySettings:policySettings, Rules:rules}" --output json, see network front-door waf-policy.json for details.
+Executing: az search service list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, Properties:properties, QueryKeys:queryKeys}" --output json
+ERROR: unrecognized arguments: NetworkWatcherRG resource-graph-queries logs Contoso-POC-Automation-RG-01 Contoso-POC-Automation-rg-01-SP2019Farm ASC-Export-Log-Analytics-Configuration Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG aibmdi001 WIN2K16-TEMP_group DefaulResourceGroup-EUS2 TestRHELBuild_group microsoft-network-eastus2 cloud-shell-storage-eastus DemoResourceGroup myrg-sk Dev_Azure_CloudSandbox1_rg databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my DefaultResourceGroup-WEU MaximusK8sDemo vmsssecondtest-asr-1 Site-recovery-vaut-RG-1 EAP_PoC_DevWEU_RG EAP_PoC_STGWEU_RG EAP_PoC_ProdWEU_RG EAP_PoC_TSTWEU_RG SQl-Backup-PoC-CA-416 sqlbackuppocrg testing-automation-account test2_RG test1_RG DefaultResourceGroup-EUS Site-recovery-vault-RG testingasr-asr SQL-Backup-to-Blob vmsstest testingasr
 
 Examples from AI knowledge base:
 az search service list --resource-group myresourcegroup
@@ -206,14 +869,132 @@ Gets a list of all Search services in the given resource group. (autogenerated)
 
 https://docs.microsoft.com/en-US/cli/azure/search/service#az_search_service_list
 Read more about the command in reference docs
-Error executing az search service list --query "[].{Name:name, Properties:properties, QueryKeys:queryKeys}" --output json, see search service.json for details.
+Error executing az search service list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --query "[].{Name:name, Properties:properties, QueryKeys:queryKeys}" --output json, see search service.json for details.
 Executing: az acr list --query "[].{Name:name, Properties:properties, NetworkRules:networkRules}" --output json
-Output successfully saved to acr.json
+Error executing az acr list --query "[].{Name:name, Properties:properties, NetworkRules:networkRules}" --output json, see acr.json for details.
 Executing: az aks list --query "[].{Name:name, Properties:properties, NodePools:nodePools}" --output json
 Output successfully saved to aks.json
-Executing: az webapp deployment slot list --query "[].{Name:name, Properties:properties, Configurations:configurations}" --output json
-ERROR: (--resource-group --name | --ids) are required
-Error executing az webapp deployment slot list --query "[].{Name:name, Properties:properties, Configurations:configurations}" --output json, see webapp deployment slot.json for details.
+Executing: az webapp deployment slot list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --name web-aoo-demo --query "[].{Name:name, Properties:properties, Configurations:configurations}" --output json
+ERROR: unrecognized arguments: NetworkWatcherRG resource-graph-queries logs Contoso-POC-Automation-RG-01 Contoso-POC-Automation-rg-01-SP2019Farm ASC-Export-Log-Analytics-Configuration Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG aibmdi001 WIN2K16-TEMP_group DefaulResourceGroup-EUS2 TestRHELBuild_group microsoft-network-eastus2 cloud-shell-storage-eastus DemoResourceGroup myrg-sk Dev_Azure_CloudSandbox1_rg databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my DefaultResourceGroup-WEU MaximusK8sDemo vmsssecondtest-asr-1 Site-recovery-vaut-RG-1 EAP_PoC_DevWEU_RG EAP_PoC_STGWEU_RG EAP_PoC_ProdWEU_RG EAP_PoC_TSTWEU_RG SQl-Backup-PoC-CA-416 sqlbackuppocrg testing-automation-account test2_RG test1_RG DefaultResourceGroup-EUS Site-recovery-vault-RG testingasr-asr SQL-Backup-to-Blob vmsstest testingasr
+
+Examples from AI knowledge base:
+az webapp deployment slot list --ids {ids}
+List all deployment slots. (autogenerated)
+
+az webapp deployment slot list --name MyWebapp --resource-group MyResourceGroup
+List all deployment slots. (autogenerated)
+
+https://docs.microsoft.com/en-US/cli/azure/webapp/deployment/slot#az_webapp_deployment_slot_list
+Read more about the command in reference docs
+Error executing az webapp deployment slot list --resource-group cloud-shell-storage-westeurope
+NetworkWatcherRG
+resource-graph-queries
+logs
+Contoso-POC-Automation-RG-01
+Contoso-POC-Automation-rg-01-SP2019Farm
+ASC-Export-Log-Analytics-Configuration
+Dev_Azure_10000_CloudSandbox1_azure_gold_images_RG
+aibmdi001
+WIN2K16-TEMP_group
+DefaultResourceGroup-EUS2
+TestRHELBuild_group
+microsoft-network-eastus2
+cloud-shell-storage-eastus
+DemoResourceGroup
+myrg-sk
+Dev_Azure_CloudSandbox1_rg
+databricks-rg-EAP_PoC_Dev_WE_ADB-bq6wfxe6pm6my
+DefaultResourceGroup-WEU
+MaximusK8sDemo
+vmsssecondtest-asr-1
+Site-recovery-vault-RG-1
+EAP_PoC_DevWEU_RG
+EAP_PoC_STGWEU_RG
+EAP_PoC_ProdWEU_RG
+EAP_PoC_TSTWEU_RG
+SQl-Backup-PoC-CA-416
+sqlbackuppocrg
+testing-automation-account
+test2_RG
+test1_RG
+DefaultResourceGroup-EUS
+Site-recovery-vault-RG
+testingasr-asr
+SQL-Backup-to-Blob
+vmsstest
+testingasr --name web-aoo-demo --query "[].{Name:name, Properties:properties, Configurations:configurations}" --output json, see webapp deployment slot.json for details.
 Executing: az cosmosdb list --query "[].{Name:name, Properties:properties, ConnectionStrings:connectionStrings}" --output json
 Output successfully saved to cosmosdb.json
 Executing: az webapp list --query "[].{Name:name, Properties:properties, Configurations:configurations}" --output json
