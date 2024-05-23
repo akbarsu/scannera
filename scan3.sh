@@ -19,7 +19,7 @@ execute_command() {
 az login
 
 # Set the desired subscription
-az account set --subscription "your_subscription_id"
+az account set --subscription "Dev_Azure_10001_CloudSandbox2"
 
 # Retrieve the list of resource groups
 resource_groups=($(az group list --query "[].name" -o tsv))
